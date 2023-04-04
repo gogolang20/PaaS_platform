@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	token = "... your access token ..."
+	token = "github token"
 )
 
 var (
@@ -33,9 +33,11 @@ func ListRepo() {
 	// list all repositories for the authenticated user
 	repos, _, err := client.Repositories.List(ctx, "", nil)
 	if err != nil {
-		logrus.Error("[][] error")
+		logrus.Error("[github][ListRepo] error.")
 		return
 	}
 
-	fmt.Println(repos)
+	for _, repo := range repos {
+		fmt.Println(*repo.Name)
+	}
 }
