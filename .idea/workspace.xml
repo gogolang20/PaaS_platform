@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f60a61c2-b56e-4529-ae83-f566e55fdb3b" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/apis/apis.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/redis.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/github/github.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/jenkins/jenkins.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/k8s/k8s.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/logic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/platform_s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PaaS_platform.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github/github.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -9,12 +9,18 @@ import (
 	"golang.org/x/oauth2"
 )
 
-var client *github.Client
+const (
+	token = "... your access token ..."
+)
+
+var (
+	client *github.Client
+)
 
 func init() {
 	ctx := context.Background()
 	ts := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: "... your access token ..."},
+		&oauth2.Token{AccessToken: token},
 	)
 	tc := oauth2.NewClient(ctx, ts)
 
@@ -23,6 +29,7 @@ func init() {
 
 func ListRepo() {
 	ctx := context.Background()
+
 	// list all repositories for the authenticated user
 	repos, _, err := client.Repositories.List(ctx, "", nil)
 	if err != nil {
