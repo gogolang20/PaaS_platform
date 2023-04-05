@@ -9,7 +9,7 @@ import (
 )
 
 func Service(c *gin.Context) {
-	dao.Set()
+	dao.Set("key", "val", 12)
 	dao.Create()
 
 	c.JSON(http.StatusOK, gin.H{
