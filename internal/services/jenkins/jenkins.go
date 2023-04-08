@@ -7,6 +7,12 @@ import (
 	"sync"
 )
 
+const (
+	url      = "http://localhost:8001"
+	admin    = "admin"
+	password = "bbe4fffb857b469a9d92e7c45c5576d2"
+)
+
 var (
 	jenkins *gojenkins.Jenkins
 )
@@ -15,7 +21,7 @@ var once sync.Once
 
 func init() {
 	ctx := context.Background()
-	jenkins = gojenkins.CreateJenkins(nil, "http://localhost:8001", "admin", "bbe4fffb857b469a9d92e7c45c5576d2")
+	jenkins = gojenkins.CreateJenkins(nil, url, admin, password)
 	_, err := jenkins.Init(ctx)
 	if err != nil {
 		logrus.Error("Something Went Wrong: ", err)
@@ -25,12 +31,13 @@ func init() {
 	logrus.Info("[jenkins][init] success")
 }
 
-func CreateJob() {
+func CreateJob(ctx context.Context, repo string) {
 	logrus.Info("[jenkins][CreateJob] version", jenkins.Version)
 
-	ctx := context.Background()
-	config := ""
-	_, err := jenkins.CreateJob(ctx, config)
+	repo = "https://github.com/gogolang20/template.git"
+	jobID := "job_test"
+	config := "./job_temp.xml"
+	_, err := jenkins.CreateJob(ctx, config, jobID)
 	if err != nil {
 		logrus.Error("[jenkins][CreateJob] error: ", err)
 		return

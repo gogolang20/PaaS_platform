@@ -8,11 +8,11 @@ help:
 
 .PHONY: run
 run:
-	@go run main.go
+	@go run ./cmd/main.go
 
 .PHONY: build
 build:
-	@CGO_ENABLED=0 go build -o main main.go
+	@CGO_ENABLED=0 go build -o main ./cmd/main.go
 
 .PHONY: tidy
 tidy:

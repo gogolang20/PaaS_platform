@@ -6,7 +6,7 @@ WORKDIR /workspace
 ENV CGO_ENABLED 0
 ENV GOPROXY https://goproxy.cn,direct
 
-RUN go build -o main main.go
+RUN go build -o main ./cmd/main.go
 
 # use a minimal alpine image
 FROM alpine:3.17
